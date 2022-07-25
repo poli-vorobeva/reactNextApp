@@ -1,0 +1,14 @@
+.star{
+
+}
+.star svg{
+    border: none;
+    outline: none;
+}
+
+.fill svg{
+    fill:var(--primary);
+}
+.editable{
+    cursor: pointer;
+}
