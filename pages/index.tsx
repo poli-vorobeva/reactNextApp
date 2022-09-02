@@ -11,6 +11,7 @@ import {MenuItem} from "../interfaces/menu.interface";
 import {useState} from "react";
 
 const Home = ({menu,firstCategory}:HomeProps):JSX.Element => {
+	console.log(menu,firstCategory)
 	const [rating, setRating] = useState(4)
 	return <>
 
@@ -31,11 +32,6 @@ const Home = ({menu,firstCategory}:HomeProps):JSX.Element => {
 		<Rating rating={rating} isEditable setRating={setRating}/>
 		<Rating rating={1}/>
 		<Rating rating={3}/>
-		{
-			menu.map(e=> {
-				return (<div key={e._id.secondCategory}>{e._id.secondCategory}</div>)
-			})
-		}
 	</>
 }
 
@@ -46,6 +42,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
 	const {data: menu} = await axios.post<MenuItem[]>(process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/find',{
 		firstCategory
 	})
+	console.log("______",menu)
 	return {
 		props: {
 			menu, firstCategory
