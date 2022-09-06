@@ -24,21 +24,18 @@
     cursor: pointer;
     text-transform: uppercase;
     color: var(--gray-dark);
-
 }
-
 .secondBlock {
     margin-top: 15px;
     margin-left: 12px;
     padding-left: 32px;
     border-left: 1px solid #DFDFDF;
 }
-
-.secondLevel {
-    margin-bottom: 10px;
-    cursor: pointer;
-    text-transform: uppercase;
-    color: var(--gray-dark)
+.secondLevelBlock{
+    display: none;
+}
+.secondLevelBlockOpened{
+    display: block;
 }
 .secondLevelBlockOpened:last-child{
     margin-bottom: 20px;
